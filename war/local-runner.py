@@ -113,7 +113,7 @@ class WarRunner:
             print("Games won (out of {}): {}".format(ROUNDS_PER_GAME, self.results['p1']))
             print("Games lost (out of {}): {}".format(ROUNDS_PER_GAME, self.results['p2']))
             print("Games drawn (out of {}): {}".format(ROUNDS_PER_GAME, self.results['draw']))
-            print("INFO: For more detailed information, you can set ROUNDS_PER_GAME to be TRUE to see all the played cards per round")
+            print("INFO: For more detailed information, you can set ROUND_BY_ROUND_LOG to be TRUE to see all the played cards per round")
             print("Your script is ready to be uploaded!")
         else:
             print("Game failed! Your script will not complete validation.")
