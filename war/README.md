@@ -16,7 +16,7 @@ The winner of each **round** is the player with the most points won during that 
 
 ## Development of a Player
 
-To participate, a player script (or _bot_) needs to be written in Python
+To participate, a player script (or _bot_) needs to be written in Python, using version **3.x.x**
 
 ### Requirements
 
