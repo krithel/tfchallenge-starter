@@ -15,16 +15,16 @@ class GameState:
     def generateStateP1(self):
 
         p1State = PlayerGameState()
-        p1State.myHistory = self.p1History
-        p1State.oppHistory = self.p2History
+        p1State.myHistory = self.p1History.copy()
+        p1State.oppHistory = self.p2History.copy()
 
         return p1State
 
     def generateStateP2(self):
 
         p2State = PlayerGameState()
-        p2State.myHistory = self.p2History
-        p2State.oppHistory = self.p1History
+        p2State.myHistory = self.p2History.copy()
+        p2State.oppHistory = self.p1History.copy()
 
         return p2State
 

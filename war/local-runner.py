@@ -83,11 +83,11 @@ class WarRunner:
             # Player 1
             # Ask the player to pick their card and pop it off their hand
             p1RoundState = roundState.generateStateP1()
-            p1Move = self.playerOne.chooseCard(roundState.p1CardsInHand, p1RoundState, p1GameState)
+            p1Move = self.playerOne.chooseCard(roundState.p1CardsInHand.copy(), p1RoundState, p1GameState)
             
             # Player 2
             p2RoundState = roundState.generateStateP2()
-            p2Move = self.playerTwo.chooseCard(roundState.p2CardsInHand, p2RoundState, p2GameState)
+            p2Move = self.playerTwo.chooseCard(roundState.p2CardsInHand.copy(), p2RoundState, p2GameState)
             
             # Add the card to the roundState
             p1Card = roundState.p1CardsInHand.pop(p1Move)

@@ -25,16 +25,16 @@ class RoundState:
     def generateStateP1(self):
 
         p1State = PlayerRoundState(self.startingHand)
-        p1State.myPlayedCards = self.p1PlayedCards
-        p1State.oppPlayedCards = self.p2PlayedCards
+        p1State.myPlayedCards = self.p1PlayedCards.copy()
+        p1State.oppPlayedCards = self.p2PlayedCards.copy()
 
         return p1State
 
     def generateStateP2(self):
 
         p2State = PlayerRoundState(self.startingHand)
-        p2State.myPlayedCards = self.p2PlayedCards
-        p2State.oppPlayedCards = self.p1PlayedCards
+        p2State.myPlayedCards = self.p2PlayedCards.copy()
+        p2State.oppPlayedCards = self.p1PlayedCards.copy()
 
         return p2State
 
