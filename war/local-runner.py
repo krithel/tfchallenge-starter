@@ -10,7 +10,7 @@ from models.roundState import PlayerRoundState
 SCRIPT_USER = 'my-first-bot'
 SCRIPT_OPP = 'opponent-bot'
 ROUND_BY_ROUND_LOG = False
-ROUNDS_PER_GAME = 10
+ROUNDS_PER_GAME = 1
 
 STARTING_CARDS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -84,12 +84,14 @@ class WarRunner:
             # Ask the player to pick their card and pop it off their hand
             p1RoundState = roundState.generateStateP1()
             p1Move = self.playerOne.chooseCard(roundState.p1CardsInHand, p1RoundState, p1GameState)
-            p1Card = roundState.p1CardsInHand.pop(p1Move)
-            roundState.p1PlayedCards.append(p1Card)
-
+            
             # Player 2
             p2RoundState = roundState.generateStateP2()
             p2Move = self.playerTwo.chooseCard(roundState.p2CardsInHand, p2RoundState, p2GameState)
+            
+            # Add the card to the roundState
+            p1Card = roundState.p1CardsInHand.pop(p1Move)
+            roundState.p1PlayedCards.append(p1Card)
             p2Card = roundState.p2CardsInHand.pop(p2Move)
             roundState.p2PlayedCards.append(p2Card)
 
